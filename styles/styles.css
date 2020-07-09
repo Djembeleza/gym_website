@@ -12,15 +12,44 @@
     --light-steel-blue: #e7ecf1;
 }
 
+h1,h2,h3 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 
+p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: right;
+}
+
+body {
+    background-color: var(--light-steel-blue);
+}
+
+a {
+    text-decoration: none;
+    
+}
+
+/* Responsive image */
+.responsive-img {
+    width: 100%;
+    height: auto;
+}
 /* Style the top section */
 .header-img {
     width: 100%;
     height: auto;
 }
 
-.top-section {
+.top-section, .group-sessions {
     position: relative;
+}
+
+
+.group-sessions .wave {
+    z-index: 2;
+    position: absolute;
+    bottom: 0;
 }
 
 header {
@@ -55,6 +84,7 @@ header .open {
     top: 0;
     color: var(--dark-slate-gray);
 }
+
 .gym-title {
     font-size: 1.8rem;
     margin-top: 1rem;
@@ -80,3 +110,75 @@ header .open {
 
 /* End Style Top Section */
 
+/* Style section area */
+section h3 {
+
+    padding: 2rem;
+    text-align: center;
+}
+
+section p, h3 + img {
+    padding: 0.3rem 2rem;
+}
+/* End section style */
+
+/* Style Form */
+form {
+    padding: 1.2rem 2rem 0;
+}
+
+form label, form input, .btn {
+
+    width: 100%;
+}
+
+form input {
+    transition: 0.6s border cubic-bezier(0.47, 0, 0.745, 0.715);
+    height: 2.2rem;
+    border-radius: 0.2rem;
+}
+
+form input:focus {
+    border-bottom: 0.3rem solid var(--tan);
+}
+
+form label {
+    font-size: 1.2rem;
+    display: inline-block;
+    margin-top: 1.2rem;
+}
+
+.newsletter form input {
+    margin-top: 0.5rem;
+}
+/* End form style */
+
+/* Button Styles  */
+.btn {
+    text-align: center;
+    width: 100%;
+    padding: 1.6rem 2rem;
+    font-weight: 700;
+    font-size: 1.0rem;
+    margin-top: 0.8rem;
+    cursor: pointer;
+}
+
+.btn-more > p {
+    text-align: center;
+}
+/* End Button Styles */
+
+/* Footer */
+footer {
+    display: grid;
+    place-items: center;
+    margin-top: 0.8rem;
+    text-align: center;
+    min-height: 8vh;
+    background-color: var(--dark-slate-gray);
+    border-top-left-radius: 0.8rem;
+    border-top-right-radius: 0.8rem;
+    color: var(--beige);
+}
+/* end footer */
