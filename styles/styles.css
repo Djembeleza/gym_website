@@ -41,16 +41,11 @@ a {
     height: auto;
 }
 
-.top-section, .group-sessions {
+.top-section {
     position: relative;
 }
 
 
-.group-sessions .wave {
-    z-index: 2;
-    position: absolute;
-    bottom: 0;
-}
 
 header {
     position: absolute;
@@ -119,6 +114,10 @@ section h3 {
 
 section p, h3 + img {
     padding: 0.3rem 2rem;
+}
+
+.group-sessions {
+    border-bottom: 0.4rem solid var(--dark-slate-gray);
 }
 /* End section style */
 
