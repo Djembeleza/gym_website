@@ -14,6 +14,7 @@
 
 h1,h2,h3 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: capitalize;
 }
 
 p {
@@ -30,6 +31,22 @@ a {
     
 }
 
+a:is(:focus,:hover) {
+    text-transform: uppercase;
+}
+
+a[href^='mailto'] {
+    color: rgb(136, 173, 173);
+}
+
+a:visited {
+    text-decoration: line-through;
+    text-decoration-style: wavy;
+    text-decoration-color: var(--tan);
+}
+
+
+
 /* Responsive image */
 .responsive-img {
     width: 100%;
@@ -41,9 +58,6 @@ a {
     height: auto;
 }
 
-.top-section {
-    position: relative;
-}
 
 
 
@@ -64,7 +78,8 @@ header .close, header .open {
 
 header .close {
     position: absolute;
-    top: 7.25vh;
+    top: 5rem;
+
     z-index: 2;
     right: 1.2rem;
     display: none;
@@ -103,30 +118,29 @@ header .open {
     font-weight: 800;
 }
 
-/* End Style Top Section */
 
 /* Style section area */
+section {
+    padding: 0.3rem 2rem;
+
+}
+
+
+.top-section {
+    position: relative;
+    padding: 0;
+}
 section h3 {
 
     padding: 2rem;
     text-align: center;
 }
 
-section p, h3 + img {
-    padding: 0.3rem 2rem;
-}
-
-.group-sessions {
-    border-bottom: 0.4rem solid var(--dark-slate-gray);
-}
 /* End section style */
 
 /* Style Form */
-form {
-    padding: 1.2rem 2rem 0;
-}
 
-form label, form input, .btn {
+form label, form input {
 
     width: 100%;
 }
@@ -154,13 +168,59 @@ form label {
 
 /* Button Styles  */
 .btn {
+    color: var(--dark-slate-gray);
+    position: relative;
     text-align: center;
     width: 100%;
-    padding: 1.6rem 2rem;
+    padding: 1.12rem 2rem;
+    height: 4.2rem;
+    display: block;
     font-weight: 700;
     font-size: 1.0rem;
     margin-top: 0.8rem;
+    overflow: hidden;
     cursor: pointer;
+    transition: 0.8s;
+    border-radius: 2rem;
+    color: var(--light-steel-blue);
+    letter-spacing: 0.5rem;
+    border: 0.35rem;
+    color: #000000;
+}
+
+.btn:focus,.btn:hover {
+    border-style: inset;
+    border-color: var(--dark-slate-gray);
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+ 
+.btn-submit {
+    background-color: rgba(0, 175, 0, 0.4);
+}
+
+.btn-submit:is(:focus,:hover) {
+    color: #ffffff;
+    background-color: rgba(0,175,0,1);
+}
+
+.btn-more {
+    background-color: rgba(14, 195, 255,0.2);
+    color: var(--dark-slate-gray);
+}
+
+.btn-more:is(:focus,:hover) {
+    color: var(--light-steel-blue);
+    background-color: rgba(14, 195, 255,1);
+}
+
+.btn-clear {
+    background-color: rgba(250,0,0,0.4);
+} 
+
+.btn-clear:is(:focus, :hover) {
+    background-color: rgba(255,0,0,1);
 }
 
 .btn-more > p {
@@ -176,8 +236,7 @@ footer {
     text-align: center;
     min-height: 8vh;
     background-color: var(--dark-slate-gray);
-    border-top-left-radius: 0.8rem;
-    border-top-right-radius: 0.8rem;
     color: var(--beige);
 }
 /* end footer */
+
